@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MovieApp.Models
 {
     using System;
@@ -21,5 +23,8 @@ namespace MovieApp.Models
         public string email { get; set; }
         public string language { get; set; }
         public string category { get; set; }
+
+        [NotMapped]
+        public List<tblMovy> LanguageCollection { get; set; }
     }
 }
